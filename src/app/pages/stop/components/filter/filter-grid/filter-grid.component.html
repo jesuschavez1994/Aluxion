@@ -1,0 +1,28 @@
+<div class="container">
+    <img 
+        src="../../../../../../assets/img/right-arrow.svg" 
+        [routerLink]="['/home']"
+    />
+    <p>Autobuses cercanos</p>
+    <section>
+        <div>
+            <h3>{{NameStop}}</h3>
+        </div>
+        <div class="four-grid" (click)="GridColums(true)">
+            <div 
+                *ngFor="let item of [0, 1, 2, 3]; let i = index" 
+                [ngClass]="{'active': active, 'desactive': !active }"
+            >
+            </div>
+        </div>
+        <div class="two-grid" (click)="GridColums(false)" >
+            <div 
+                *ngFor="let item of [0, 1]" 
+                [ngClass]="{'active': !active, 'desactive': active }"
+            >
+            </div>
+        </div>
+    </section>
+</div>   
+
+

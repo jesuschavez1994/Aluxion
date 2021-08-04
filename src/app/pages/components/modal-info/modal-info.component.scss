@@ -1,0 +1,52 @@
+@import 'src/assets/scss/styles.scss';
+
+
+section{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+
+    .close{
+        background: none;
+        border: none;
+        color: $color__background_button_modal;
+        position: absolute;
+        top: 0;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    p{  
+        color: $color__background_button_modal;
+        font-size: 28px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    div{
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+        button{
+            background: $color__background_button_modal;
+            border-radius: 35px;
+            color: $color__text-white;
+            height: 38px;
+            width: 112px;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .rumbo-p{
+        margin-bottom: 35px;
+    }
+}

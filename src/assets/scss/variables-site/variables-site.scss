@@ -1,0 +1,45 @@
+@import "colors";
+@import "fonts";
+
+html{
+    font-family: 'SF Pro Display' !important;
+    font-size: 12px;
+}
+body{
+    font-family: 'SF Pro Display' !important;
+}
+
+.title-big-b{
+    font-size: 64px;
+    font-size: 5.3rem;
+    font-weight: 900;
+    @media(max-width: 400px){
+        font-size: 50px;
+
+    }
+    @media(max-width: 800px){
+        font-size: 50px;
+
+    }
+    @media(max-width: 1080px){
+        font-size: 50px;
+
+    }
+}
+.title-small{
+    font-size: 14px;
+    font-size: 1.18rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.title-normal{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.title-card{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.muted{
+    color: #7d889d;
+}

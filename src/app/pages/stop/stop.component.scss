@@ -1,0 +1,44 @@
+section{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+    app-stop-detail {
+        padding-top: 45px;
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .show-map{
+        display: none;
+    }
+
+    app-button-map{
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+
+        grid-template-columns: 1fr;
+
+        app-stop-detail {
+            padding-top: 45px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        app-button-map{
+            display: block;
+        }
+
+        .app-to-stops{
+            display: block;
+            height: 68px;
+        }
+
+        app-map{
+            height: 100vh;
+        }
+    }
+}

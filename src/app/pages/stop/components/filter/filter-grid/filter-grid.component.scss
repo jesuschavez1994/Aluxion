@@ -1,0 +1,72 @@
+@import 'src/assets/scss/styles.scss';
+
+.container{
+    padding: 20px;
+    img{
+        width: 22px;
+        height: 22px;
+        margin-bottom: 18px;
+        transform: rotate(180deg);
+    
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+    p{
+        color: $color__text-gray;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    section{
+        display: grid;
+        grid-template: repeat(1, 1fr)/90% 4% 3%;
+        border-bottom: 1px solid $color__text-gray;
+        margin-bottom: 51px;
+    
+        div{
+            color: $color__text-white;
+    
+            h3{
+                color: $color__text-white;
+            }
+        }
+
+        .four-grid{
+            display: grid;
+            grid-template-columns:repeat(2, 5px);
+            grid-template-rows: repeat(2, 5px);
+            gap: 2px;
+        }
+
+        .two-grid{
+            display: grid;
+            grid-template-columns:repeat(1, 15px);
+            grid-template-rows: repeat(2, 5px);
+            gap: 2px;
+            height: 12px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .active{
+            display: none;
+        }
+        
+        .desactive{
+            display: none;
+        }
+        
+    }
+}
+
+.active{
+    background: $color__text-white;
+}
+
+.desactive{
+    background: $color__text-gray;
+}
+
+    

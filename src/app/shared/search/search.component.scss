@@ -1,0 +1,91 @@
+@import 'src/assets/scss/styles.scss';
+
+
+.container-serch{
+
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    
+    .form {
+        height: 60px;
+        position: relative;
+        overflow: hidden;
+        //???
+        //width: 414px;
+        width: 100%;
+        max-width: 414px;
+        @media(max-width: 675px){
+            max-width: 180px;
+        }
+        .bar{
+            margin-top: -3px;
+        }
+       
+    
+        input{
+            background-color: $color__background;
+            background-image: url(../../../assets/img/search.svg);
+            background-position-x: right;
+            background-position-y: 30px;;
+            background-repeat: no-repeat;
+            background-size: 18px;
+            border: none;
+            color: #fff;
+            height: 100%;
+            padding-top: 20px;
+            width: 100%;
+    
+            &:focus{
+                outline: none;
+            }
+    
+            &:focus + .label-name .content-name,
+            .form input:valid + .label-name .content-name {
+                color: white;
+                font-size: 14px;
+                left: 0px;
+                transform: translateY(-150%);
+            }
+    
+            &:focus + .label-name::after,
+            .form input:valid + .label-name::after {
+                transform: translateX(0%);
+                }
+        }
+    
+        label{
+            bottom: 0px;
+            border-bottom: 1px solid $color__text-gray;
+            left: 0px;
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+    
+            &::after{
+                border-bottom: 3px solid #fff;
+                bottom: -1px;
+                content: "";
+                height: 100%;
+                left: 0px;
+                position: absolute;
+                transform: translateX(-100%);
+                transition: all 0.3s ease;
+                width: 100%;
+            }
+    
+            .content-name {
+                bottom: 0px;
+                color: $color__text-gray;
+                font-weight: 400;
+                left: 0px;
+                position: absolute;
+                padding-bottom: 5px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+} 

@@ -1,0 +1,236 @@
+@import 'src/assets/scss/styles.scss';
+
+.grid{
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 60px;
+    padding: 20px;
+    row-gap: 16px;
+
+    div{
+        .item{
+            background: #1D3051;
+            border-radius: 4px;
+            height: 106px;
+
+            &:hover{
+                background: $color__text-white;
+                cursor: pointer;
+
+                .card_detail{
+                    .item_stop{
+                        span{
+                            color: $color__background_button_modal;
+                        }
+                        
+                    }
+                    .item_state{
+                        .text_stop{
+                            color: $color__background_button_modal;
+                        }
+                        .text_city{
+                            color: $color__text_span_card;
+                        }
+                    }
+                }
+            }
+
+            .card_detail{
+                display: grid;
+                grid-template: repeat(3, 1fr)/70px repeat(2, 1fr);
+                grid-template-areas:"n_parada n_state n_state"
+                                    "n_parada n_state n_state"
+                                    "n_parada n_clock n_clock";
+                                    
+                height: 100%;
+
+                .item_stop{
+                    align-items: center;
+                    color: $color__text-white;
+                    display: flex;
+                    justify-content: center;
+                    span{
+                        font-size: 26px;
+                    }
+                }
+
+                .item_clock{
+                    align-items: center;
+                    display: flex;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 18px;
+
+                    .span_time_clock{
+                        color: $color__yellow_time;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img{
+                            height: 19px;
+                            margin-right: 6px;
+                            width: 20.81px;
+                        }
+                        
+                    }
+
+                    .span_time_radio{
+                        color: $color__gren_mt;
+                        font-size: 12px;
+
+                        img{
+                            margin-right:7px;
+                        }
+                    }
+                }
+
+                .n_parada{grid-area: n_parada;}
+                .n_state{grid-area: n_state;}
+                .n_clock{grid-area: n_clock;}
+
+                .item_state{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-top: 25px;
+                    .text_stop{
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    .text_city{
+                        font-size: 13px;
+                        font-weight: 300;
+                    }
+                    span{
+                        color: $color__text-white;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.row{
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 60px;
+    padding: 20px;
+    row-gap: 16px;
+
+    div{
+        .item{
+            background: #1D3051;
+            border-radius: 4px;
+            height: 106px;
+
+            &:hover{
+                background: $color__text-white;
+                cursor: pointer;
+
+                .card_detail{
+                    .item_stop{
+                        span{
+                            color: $color__background_button_modal;
+                        }
+                        
+                    }
+                    .item_state{
+                        .text_stop{
+                            color: $color__background_button_modal;
+                        }
+                        .text_city{
+                            color: $color__text_span_card;
+                        }
+                    }
+                }
+            }
+
+            .card_detail{
+                display: grid;
+                grid-template: repeat(3, 1fr)/70px repeat(2, 1fr);
+                grid-template-areas:"n_parada n_state n_clock"
+                                    "n_parada n_state n_clock"
+                                    "n_parada n_state n_clock";
+                                    
+                height: 100%;
+
+                .item_stop{
+                    align-items: center;
+                    color: $color__text-white;
+                    display: flex;
+                    justify-content: center;
+                    span{
+                        font-size: 26px;
+                    }
+                }
+
+                .item_clock{
+                    align-items: center;
+                    display: flex;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 18px;
+
+                    .span_time_clock{
+                        color: $color__yellow_time;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img{
+                            height: 15px;
+                            margin-right: 6px;
+                            width: 16px;
+                        }
+                        
+                    }
+
+                    .span_time_radio{
+                        color: $color__gren_mt;
+                        font-size: 18px;
+
+                        img{
+                            margin-right:7px;
+                        }
+                    }
+                }
+
+                .n_parada{grid-area: n_parada;}
+                .n_state{grid-area: n_state;}
+                .n_clock{grid-area: n_clock;}
+
+                .item_state{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .text_stop{
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    .text_city{
+                        font-size: 13px;
+                        font-weight: 300;
+                    }
+                    span{
+                        color: $color__text-white;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
+}

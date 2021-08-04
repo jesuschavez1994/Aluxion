@@ -1,0 +1,19 @@
+@import 'src/assets/scss/styles.scss';
+
+section{
+    align-items: center;
+    background-color: $color__background_button_modal;
+    display: flex;
+    height: 68px;
+    padding-left: 23px;
+    padding-top: 35px;
+    img{
+        width: 22px;
+        height: 22px;
+        margin-bottom: 18px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

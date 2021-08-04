@@ -1,0 +1,30 @@
+<section>
+
+    <app-to-stops 
+        *ngIf="map" 
+        (returnToStops)="toStops($event)">
+    </app-to-stops>
+
+    <app-stop-detail 
+        (Arrives)="arrives($event)"
+        (Marker)="marker($event)" 
+        #paradas
+        [ngClass]="{'show-map': map}">
+    </app-stop-detail>
+
+    <app-map 
+        [Arrives]="Arrives" 
+        [coordinates]="" 
+        *ngIf="load" 
+        #mapa>
+    </app-map>
+
+    <app-button-map 
+        (showMap)="stateMap($event)" 
+        *ngIf="!map">
+    </app-button-map>
+
+</section>
+
+
+

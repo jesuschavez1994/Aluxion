@@ -1,0 +1,53 @@
+
+<app-header-detail></app-header-detail>
+
+<app-filter-grid 
+                (grid)="StateGridColumn($event)" 
+                [NameStop]="this.busMasCercano[0].destination" 
+                *ngIf="load">
+</app-filter-grid>
+
+<section 
+        [ngClass]="{'grid': grid, 'row': !grid }"
+        class="wow slideInLeft"   
+        data-wow-duration="1s" 
+        data-wow-delay="0.5s"
+        *ngIf="load"
+        id="style-1">
+    <div *ngFor="let item of paradas; let i = index">
+        <app-name-state *ngIf="load" [Line]="item.line"></app-name-state>
+        <div class="item">
+            <div class="card_detail" (click)="irMarcador(item)">
+                <div 
+                    class="item_stop n_parada wow rollIn" 
+                    data-wow-delay="2s">
+                    <span>{{item.line}}</span> 
+                </div>
+                <div class="item_state n_state">
+                    <span 
+                        class="text_stop wow lightSpeedIn" 
+                        data-wow-duration="2s" data-wow-delay="1.5s">
+                        {{item.destination}}
+                    </span>
+                    <span 
+                        class="text_city" 
+                        data-wow-duration="2s" 
+                        data-wow-delay="1.5s">
+                      
+                    </span>
+                </div>
+                <div class="item_clock n_clock">
+                   <span class="span_time_clock">
+                       <img src="../../../../../assets/img/Shape.svg"/>
+                        {{item.estimateArrive}} min
+                    </span>
+                   <span class="span_time_radio">
+                    <img src="../../../../../assets/img/distance.svg"/>
+                       {{item.DistanceBus}} mt
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

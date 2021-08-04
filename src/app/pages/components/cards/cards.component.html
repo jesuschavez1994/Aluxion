@@ -1,0 +1,8 @@
+<section>
+    <article *ngFor="let item of array; let i = index" (click)="openDialog(i)">
+        <img data-src="{{item.avatar}}" class="lazyload">
+        <h5 class="title-normal">{{item.aluxioner}}</h5>
+        <span class="muted">{{item.cargo}}</span>
+    </article>
+</section>
+

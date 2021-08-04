@@ -1,0 +1,21 @@
+<div class="container-serch">
+    <div class="form">
+        <input 
+        type="text" 
+        name="text" 
+        autocomplete="off"
+        #search  
+        [formControl]="searchForm"
+        />
+        <label for="text" class="label-name">
+            <span class="content-name">
+                ¿Cuál es tu parada?
+            </span>
+        </label>
+        <mat-progress-bar mode="indeterminate" class="bar" *ngIf="progressBar"></mat-progress-bar>
+    </div>
+  
+</div>
+
+
+

@@ -1,0 +1,7 @@
+{
+    "/v2/*":{
+        "target": "https://openapi.emtmadrid.es",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,15 @@
+@import 'src/assets/scss/styles.scss';
+
+section{
+    display: grid;
+    grid-template: repeat(1, 1fr)/1fr 219px;
+    h5{
+        color: $color__text-white;
+        font-weight: 300;
+        letter-spacing: 3px;
+    }
+
+    app-search{
+        transform: translateY(-35px);
+    }
+}

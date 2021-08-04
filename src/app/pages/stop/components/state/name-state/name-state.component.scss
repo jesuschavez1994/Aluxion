@@ -1,0 +1,21 @@
+@import 'src/assets/scss/styles.scss';
+
+section{
+    align-items: center;
+    display: flex;
+    padding-left: 38px;
+    margin-bottom: 20px;
+
+    h3{
+        color: $color__text-white;
+        font-size: 20px;
+        margin-bottom: 0px;
+        padding-left: 17px;
+
+    }
+
+    .img-bus{
+        width: 16px; 
+        height: 19,64px;
+    }
+}
